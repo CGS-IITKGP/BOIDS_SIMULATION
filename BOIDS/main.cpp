@@ -1,27 +1,24 @@
 #include <iostream>
 #include <raylib.h>
 #include "particle.h"
-#include "allignment.h"
 #include <cstdlib>
-#include <raymath.h>
+#include <ctime>
+
+
 
 int main() {
-    InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Boids Simulation");
+    InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Boid Test");
     SetTargetFPS(60);
+    srand(time(NULL));
     make();
 
     while (!WindowShouldClose()) {
-        raycast(boid_array, boid_neighbors, boid_neighbor_count);
-
         BeginDrawing();
         ClearBackground(BLACK);
 
-        allignment(boid_array, boid_neighbors, boid_neighbor_count);
-        print_boids_in_neighborhood(boid_array, boid_neighbors, boid_neighbor_count);
         for (int i = 0; i < MAX_PARTICLES; i++) {
-            boid_array[i].draw();
             boid_array[i].update();
-            
+            boid_array[i].draw();
         }
 
         EndDrawing();
