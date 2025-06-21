@@ -6,21 +6,35 @@
 
 const int SCREEN_WIDTH = 800;
 const int SCREEN_HEIGHT = 600;
+
 const int RADIUS_OF_VISION = 50;
 const float ANGLE_IN_RADIANS = (150.0f/360.0f)*PI;
 const int RADIUS_OF_VISION_SQR = RADIUS_OF_VISION*RADIUS_OF_VISION ;
-const int VELOCITY = 6;
-const int MAX_PARTICLES =6;
+const int RADIUS_OF_VISION_PROTECTED = 20;
+const int RADIUS_OF_VISION_PROTECTED_SQR = RADIUS_OF_VISION_PROTECTED*RADIUS_OF_VISION_PROTECTED ;
+
+const float VELOCITY = 5;
+const float MAXVELOCITY = 8;
+const float MINVELOCITY = 2;
+
+const int MAX_PARTICLES =20;
+
+const float ALLIGNMENT_FACTOR = 1.0f/(2*RADIUS_OF_VISION);
+const float COHESION_FACTOR = 0.01f;
+const float SEPERATION_FACTOR = 0.01f;
+
+
 
 
 // Forward declarations
 struct Boid;
 struct BoidNeighbor;
 
-extern Boid boid_array[MAX_PARTICLES];  // ✅ extern, not definition
+extern Boid boid_array[MAX_PARTICLES];  
 extern BoidNeighbor boid_neighbors[MAX_PARTICLES][MAX_PARTICLES];
 extern int boid_neighbor_count[MAX_PARTICLES];
-
+extern BoidNeighbor boid_protected_neighbors[MAX_PARTICLES][MAX_PARTICLES];
+extern int boid_protected_neighbors_count[MAX_PARTICLES];
 
 class Boid {
 public:
@@ -28,22 +42,28 @@ public:
     float total_vel;
     Vector2 pos;
     Vector2 vel;
-    Vector2 force = {0, 0};
+    
     float angle;
     void update() {
-        
-        pos.x += vel.x + 0.5f * force.x;
-        vel.x += force.x;
-
-        pos.y += vel.y + 0.5f * force.y;
-        vel.y += force.y;
         angle = atan2f(vel.y, vel.x);
+        total_vel = Vector2Length(vel);
+        if(total_vel<MINVELOCITY)
+        {
+            total_vel=MINVELOCITY;
+            vel = {total_vel*cos(angle), total_vel*sin(angle)};
+        }
+        else if(total_vel> MAXVELOCITY)
+        {
+            total_vel=MAXVELOCITY;
+            vel = {total_vel*cos(angle), total_vel*sin(angle)};
+        }
+        pos  = Vector2Add(pos, vel);
         
         if (pos.x < 0) pos.x += SCREEN_WIDTH;
         if (pos.x > SCREEN_WIDTH) pos.x -= SCREEN_WIDTH;
         if (pos.y < 0) pos.y += SCREEN_HEIGHT;
         if (pos.y > SCREEN_HEIGHT) pos.y -= SCREEN_HEIGHT;
-        force = {0, 0};
+        
 
     }
     void draw() {
@@ -76,6 +96,6 @@ struct BoidNeighbor {
 
 
 void make();
-void raycast(Boid boid_array[], BoidNeighbor boid_neighbors[][MAX_PARTICLES], int boid_neighbor_count[]);
+void raycast(Boid boid_array[], BoidNeighbor boid_neighbors[][MAX_PARTICLES], int boid_neighbor_count[],BoidNeighbor boid_protected_neighbors[][MAX_PARTICLES],int boid_protected_neighbors_count[]);
 void print_boids_in_neighborhood(Boid boid_array[], BoidNeighbor boid_neighbors[][MAX_PARTICLES], int boid_neighbor_count[]);
 Vector2 getDirection(Vector2 from, Vector2 to);
