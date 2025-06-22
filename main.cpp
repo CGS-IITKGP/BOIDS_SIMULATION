@@ -1,11 +1,11 @@
 #include <iostream>
 #include <raylib.h>
 #include "particle.h"
-#include "allignment.h"
+#include "rules.h"
 #include <cstdlib>
 #include <raymath.h>
-#include "seperation.h"
-#include "cohesion.h"
+
+
 int main() {
     InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Boids Simulation");
     SetTargetFPS(60);
@@ -17,10 +17,16 @@ int main() {
         BeginDrawing();
         ClearBackground(BLACK);
 
-        allignment(boid_array, boid_neighbors, boid_neighbor_count);
+        // allignment(boid_array, boid_neighbors, boid_neighbor_count);
+
         seperation(boid_array, boid_neighbors, boid_neighbor_count,boid_protected_neighbors,boid_protected_neighbors_count);
-        cohesion(boid_array, boid_neighbors, boid_neighbor_count);
+
+        // cohesion(boid_array, boid_neighbors, boid_neighbor_count);
+
+
+
         // print_boids_in_neighborhood(boid_array, boid_neighbors, boid_neighbor_count);
+        print_boids_in_neighborhood_protected(boid_array,boid_protected_neighbors_count);
         for (int i = 0; i < MAX_PARTICLES; i++) {
             boid_array[i].draw();
             boid_array[i].update();

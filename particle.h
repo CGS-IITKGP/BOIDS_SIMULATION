@@ -7,21 +7,21 @@
 const int SCREEN_WIDTH = 800;
 const int SCREEN_HEIGHT = 600;
 
-const int RADIUS_OF_VISION = 50;
+const int RADIUS_OF_VISION = 40;
 const float ANGLE_IN_RADIANS = (150.0f/360.0f)*PI;
 const int RADIUS_OF_VISION_SQR = RADIUS_OF_VISION*RADIUS_OF_VISION ;
 const int RADIUS_OF_VISION_PROTECTED = 20;
 const int RADIUS_OF_VISION_PROTECTED_SQR = RADIUS_OF_VISION_PROTECTED*RADIUS_OF_VISION_PROTECTED ;
 
-const float VELOCITY = 5;
-const float MAXVELOCITY = 8;
+const float VELOCITY = 4;
+const float MAXVELOCITY = 7;
 const float MINVELOCITY = 2;
 
-const int MAX_PARTICLES =20;
+const int MAX_PARTICLES =40;
 
-const float ALLIGNMENT_FACTOR = 1.0f/(2*RADIUS_OF_VISION);
-const float COHESION_FACTOR = 0.01f;
-const float SEPERATION_FACTOR = 0.01f;
+const float ALLIGNMENT_FACTOR = 1.0f/(20*RADIUS_OF_VISION);
+const float COHESION_FACTOR = 0.05f;
+const float SEPERATION_FACTOR = RADIUS_OF_VISION_PROTECTED;
 
 
 
@@ -99,3 +99,4 @@ void make();
 void raycast(Boid boid_array[], BoidNeighbor boid_neighbors[][MAX_PARTICLES], int boid_neighbor_count[],BoidNeighbor boid_protected_neighbors[][MAX_PARTICLES],int boid_protected_neighbors_count[]);
 void print_boids_in_neighborhood(Boid boid_array[], BoidNeighbor boid_neighbors[][MAX_PARTICLES], int boid_neighbor_count[]);
 Vector2 getDirection(Vector2 from, Vector2 to);
+void print_boids_in_neighborhood_protected(Boid boid_array[] , int boid_neighbor_count[]);
