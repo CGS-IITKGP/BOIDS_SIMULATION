@@ -41,7 +41,7 @@
 <!-- UPDATE -->
 <div align="center">
   <a href="https://github.com/cgs-iitkgp/PROJECT_NAME">
-    <img width="80%" alt="image" src="https://github.com/user-attachments/assets/32df7e12-464a-4c16-8996-636caee09aae">
+    <img width="80%" alt="image" src="https://github.com/user-attachments/assets/db509d04-aca6-45d0-9282-a3be9c0e147d">
   </a>
 </div>
 
