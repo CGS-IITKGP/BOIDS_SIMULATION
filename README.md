@@ -40,11 +40,10 @@
 ## About The Project
 <!-- UPDATE -->
 <div align="center">
-  <a href="https://github.com/cgs-iitkgp/PROJECT_NAME">
-    <img width="80%" alt="image" src="https://github.com/user-attachments/assets/db509d04-aca6-45d0-9282-a3be9c0e147d">
+  <a href="https://github.com/user-attachments/assets/efa3930c-8478-4b32-a71b-db512f74ccc3">
+    <img src="https://github.com/user-attachments/assets/7bf697ef-763e-4658-aa3b-f261378fd708" width="320" height="240" />
   </a>
 </div>
-
 
 This project demonstrates the simulation of BOIDS using C++ and the raylib graphics library. BOIDS, short for “bird-oid objects,” is a model introduced by Craig Reynolds to simulate the natural flocking behavior seen in groups of birds, fish, or other animals. The system is governed by three core rules: separation (avoiding crowding neighbors), alignment (matching the average direction of nearby boids), and cohesion (moving toward the average position of the group). By applying these simple principles at each frame, complex and lifelike group movement emerges. Raylib is used to render the boids in real time, handle user input, and manage the simulation loop, resulting in an interactive and visually engaging representation of collective motion.
 
