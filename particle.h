@@ -4,8 +4,8 @@
 #include <raylib.h>
 #include <raymath.h>
 
-const int SCREEN_WIDTH = 800;
-const int SCREEN_HEIGHT = 600;
+const int SCREEN_WIDTH = 1400;
+const int SCREEN_HEIGHT = 900;
 
 const int RADIUS_OF_VISION = 40;
 const float ANGLE_IN_RADIANS = (150.0f/360.0f)*PI;
@@ -17,7 +17,7 @@ const float VELOCITY = 4;
 const float MAXVELOCITY = 7;
 const float MINVELOCITY = 2;
 
-const int MAX_PARTICLES =40;
+const int MAX_PARTICLES =100;
 
 const float ALLIGNMENT_FACTOR = 1.0f/(20*RADIUS_OF_VISION);
 const float COHESION_FACTOR = 0.05f;
