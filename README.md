@@ -30,6 +30,7 @@
 - [Contact](#contact)
   - [Maintainer(s)](#maintainers)
   - [creators(s)](#creators)
+- [Raylib-Quickstart](#Raylib-Quickstart)
 <!--- [Additional documentation](#additional-documentation)-->
 
 </details>
@@ -40,7 +41,7 @@
 <!-- UPDATE -->
 <div align="center">
   <a href="https://github.com/cgs-iitkgp/PROJECT_NAME">
-    <img width="80%" alt="image" src="https://github.com/blaZe2603/BOIDS_SIMULATION/blob/main/boids.png">
+    <img width="80%" alt="image" src="https://github.com/user-attachments/assets/5fa44726-f9fe-4c54-982f-f477db6875ff">
   </a>
 </div>
 
@@ -70,12 +71,7 @@ _Now that the environment has been set up and configured to properly compile and
    ```sh
    git https://github.com/blaZe2603/BOIDS_SIMULATION.git
    ```
-2. Make the script executable
-   ```sh
-   cd ./PROJECT_NAME
-   chmod +x ./PROJECT_NAME
-   ```
-3. Execute the script
+2. Execute the script
    ```sh
    press f5 
    ```
@@ -125,6 +121,7 @@ Honoring the original creator(s) and ideator(s) of this project.
 [issues-url]: https://github.com/cgs-iitkgp/PROJECT_NAME/issues
 [license-shield]: https://img.shields.io/github/license/cgs-iitkgp/PROJECT_NAME.svg?style=for-the-badge
 [license-url]: https://github.com/cgs-iitkgp/PROJECT_NAME/blob/master/LICENSE
+
 # Raylib-Quickstart
 A simple cross platform template for setting up a project with the bleeding edge raylib code.
 Works with C or C++.
