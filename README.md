@@ -20,11 +20,11 @@
      <img width="140" alt="image" src="">
   </a>
 
-  <h3 align="center">PROJECT_NAME</h3>
+  <h3 align="center">BOIDS SIMULATION</h3>
 
   <p align="center">
   <!-- UPDATE -->
-    <i>Project one liner slogan goes here</i>
+    <i>Simulating nature’s flocking magic — birds, fish, and swarms in motion</i>
   </p>
 </div>
 
