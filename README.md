@@ -16,9 +16,7 @@
 <br />
 <!-- UPDATE -->
 <div align="center">
-  <a href="https://github.com/cgs-iitkgp/PROJECT_NAME">
-     <img width="140" alt="image" src="">
-  </a>
+
 
   <h3 align="center">BOIDS SIMULATION</h3>
 
@@ -130,12 +128,7 @@ Honoring the original creator(s) and ideator(s) of this project.
 -->
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/cgs-iitkgp/PROJECT_NAME.svg?style=for-the-badge
-[contributors-url]: https://github.com/cgs-iitkgp/PROJECT_NAME/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/cgs-iitkgp/PROJECT_NAME.svg?style=for-the-badge
-[forks-url]: https://github.com/cgs-iitkgp/PROJECT_NAME/network/members
-[stars-shield]: https://img.shields.io/github/stars/cgs-iitkgp/PROJECT_NAME.svg?style=for-the-badge
-[stars-url]: https://github.com/cgs-iitkgp/PROJECT_NAME/stargazers
+
 [issues-shield]: https://img.shields.io/github/issues/cgs-iitkgp/PROJECT_NAME.svg?style=for-the-badge
 [issues-url]: https://github.com/cgs-iitkgp/PROJECT_NAME/issues
 [license-shield]: https://img.shields.io/github/license/cgs-iitkgp/PROJECT_NAME.svg?style=for-the-badge
