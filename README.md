@@ -40,7 +40,7 @@
 - [Contact](#contact)
   - [Maintainer(s)](#maintainers)
   - [creators(s)](#creators)
-- [Additional documentation](#additional-documentation)
+<!--- [Additional documentation](#additional-documentation)-->
 
 </details>
 
@@ -98,12 +98,6 @@ _Now that the environment has been set up and configured to properly compile and
 <!-- UPDATE -->
 This project simulates **boid flocking behavior** in C++ using simple rules for separation, alignment, and cohesion.  
 It can be used to visualize swarm intelligence, simulate bird flocks, or model fish schools.
-
-<div align="center">
-  <a href="https://github.com/cgs-iitkgp/PROJECT_NAME">
-    <img width="80%" alt="image" src="">
-  </a>
-</div>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
