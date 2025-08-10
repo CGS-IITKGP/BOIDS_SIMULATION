@@ -72,8 +72,6 @@ Cohesion which causes the nearby boids to try to move towards their respective c
 To set up a local instance of the application, follow the steps below.
 
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 ### Installation
 
 _Now that the environment has been set up and configured to properly compile and run the project, the next step is to install and configure the project locally on your system._
@@ -89,7 +87,7 @@ _Now that the environment has been set up and configured to properly compile and
    ```
 3. Execute the script
    ```sh
-   ./PROJECT_NAME
+   press f5 
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -98,7 +96,8 @@ _Now that the environment has been set up and configured to properly compile and
 <!-- USAGE EXAMPLES -->
 ## Usage
 <!-- UPDATE -->
-Use this space to show useful examples of how this project can be used. Additional screenshots, code examples and demos work well in this space.
+This project simulates **boid flocking behavior** in C++ using simple rules for separation, alignment, and cohesion.  
+It can be used to visualize swarm intelligence, simulate bird flocks, or model fish schools.
 
 <div align="center">
   <a href="https://github.com/cgs-iitkgp/PROJECT_NAME">
@@ -125,16 +124,16 @@ Honoring the original creator(s) and ideator(s) of this project.
 - [NAME](https://github.com/GITHUB_USERNAME)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
+<!-- 
 ## Additional documentation
-
+<!-- 
   - [License](/LICENSE)
   - [Code of Conduct](/.github/CODE_OF_CONDUCT.md)
   - [Security Policy](/.github/SECURITY.md)
   - [Contribution Guidelines](/.github/CONTRIBUTING.md)
-
+<!-- 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
+-->
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [contributors-shield]: https://img.shields.io/github/contributors/cgs-iitkgp/PROJECT_NAME.svg?style=for-the-badge
